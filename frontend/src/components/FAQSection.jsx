@@ -5,36 +5,41 @@ const faqs = [
   {
     question: "How do I book a home service?",
     answer:
-      "Booking a service is simple. Choose the service you need, select your preferred date and time, provide your details, and confirm your booking.",
+      "Booking a home service is simple. Choose the service you need, select a preferred date and time, provide your details, and confirm your booking.",
   },
   {
-    question: "Are your professionals verified?",
+    question: "Are your service professionals verified?",
     answer:
-      "Yes. We carefully verify our professionals to help ensure safe, reliable and high-quality home services.",
+      "Yes. We connect you with reliable professionals and take care to provide trusted and quality home service providers.",
   },
   {
-    question: "What services do you provide?",
+    question: "What home services do you provide?",
     answer:
-      "We provide a wide range of home services including cleaning, plumbing, electrical work, appliance repair, painting and other everyday home needs.",
+      "We provide a wide range of services including AC repair, refrigerator repair, washing machine repair, TV repair, cooler repair, fan repair, electrical work, plumbing, cleaning, painting and other home services.",
   },
   {
-    question: "How much does a service cost?",
+    question: "How much does a home service cost?",
     answer:
-      "Service pricing depends on the type of service and the work required. We aim to provide transparent pricing before the service is confirmed.",
+      "The service cost depends on the type of service and the work required. Our professionals provide pricing based on the actual service requirement.",
   },
   {
-    question: "Can I reschedule my booking?",
+    question: "Can I reschedule my service booking?",
     answer:
-      "Yes. You can contact our support team to reschedule your booking based on professional availability.",
+      "Yes. If you need to change your booking date or time, you can contact our support team. Rescheduling depends on professional availability.",
   },
   {
     question: "What if I am not satisfied with the service?",
     answer:
-      "Your satisfaction matters to us. If you are not satisfied, contact our support team and we will help resolve the issue.",
+      "Your satisfaction is important to us. If you are not satisfied with the service, please contact our support team and we will help you resolve the issue.",
+  },
+  {
+    question: "How can I contact customer support?",
+    answer:
+      "You can contact our support team through the Contact Us section. Our team will help you with booking, service-related questions and other concerns.",
   },
 ];
 
-const FAQ = () => {
+const FAQSection = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleFAQ = (index) => {
@@ -44,26 +49,26 @@ const FAQ = () => {
   return (
     <section className="bg-gray-50 py-20 sm:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-
         {/* Main Layout */}
         <div className="grid items-center gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-
+          
           {/* ================= LEFT CHARACTER ================= */}
           <div className="hidden lg:flex justify-center">
             <div className="relative flex min-h-[620px] w-full max-w-md items-center justify-center overflow-hidden rounded-3xl bg-blue-50">
-
+              
               {/* Decorative Circles */}
               <div className="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-blue-100" />
+
               <div className="absolute -bottom-20 -left-20 h-56 w-56 rounded-full bg-white/70" />
 
               {/* Character Image */}
               <img
                 src="https://i.pinimg.com/736x/e6/16/9e/e6169e786d8783c34eda4bae0ffddf70.jpg"
-                alt="Home service support character"
+                alt="Home service support"
                 className="relative z-10 h-[450px] w-auto object-contain transition duration-500 hover:-translate-y-3"
               />
 
-              {/* Small Floating Text */}
+              {/* Floating Text */}
               <div className="absolute bottom-8 left-1/2 z-20 w-[80%] -translate-x-1/2 rounded-2xl bg-white/95 p-4 text-center shadow-lg backdrop-blur">
                 <p className="text-sm font-bold text-gray-900">
                   Need Help?
@@ -73,13 +78,11 @@ const FAQ = () => {
                   Find answers to your common questions.
                 </p>
               </div>
-
             </div>
           </div>
 
           {/* ================= RIGHT FAQ ================= */}
           <div>
-
             {/* Heading */}
             <div>
               <div className="mb-4 flex items-center gap-2 text-blue-600">
@@ -102,7 +105,6 @@ const FAQ = () => {
 
             {/* FAQ List */}
             <div className="mt-10 space-y-4">
-
               {faqs.map((faq, index) => {
                 const isOpen = activeIndex === index;
 
@@ -115,13 +117,13 @@ const FAQ = () => {
                         : "border-gray-100 shadow-sm hover:border-blue-100 hover:shadow-md"
                     }`}
                   >
-
-                    {/* Question */}
+                    {/* Question Button */}
                     <button
+                      type="button"
                       onClick={() => toggleFAQ(index)}
+                      aria-expanded={isOpen}
                       className="flex w-full items-center gap-4 px-5 py-5 text-left sm:px-6"
                     >
-
                       {/* Number */}
                       <span
                         className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-xs font-bold transition-all duration-300 ${
@@ -135,16 +137,14 @@ const FAQ = () => {
 
                       {/* Question */}
                       <span
-                        className={`flex-1 text-sm font-bold sm:text-base ${
-                          isOpen
-                            ? "text-blue-700"
-                            : "text-gray-800"
+                        className={`flex-1 text-sm font-bold transition-colors sm:text-base ${
+                          isOpen ? "text-blue-700" : "text-gray-800"
                         }`}
                       >
                         {faq.question}
                       </span>
 
-                      {/* Plus */}
+                      {/* Plus Icon */}
                       <span
                         className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
                           isOpen
@@ -154,7 +154,6 @@ const FAQ = () => {
                       >
                         <FaPlus className="text-sm" />
                       </span>
-
                     </button>
 
                     {/* Answer */}
@@ -173,32 +172,30 @@ const FAQ = () => {
                         </div>
                       </div>
                     </div>
-
                   </div>
                 );
               })}
-
             </div>
 
             {/* Bottom CTA */}
-            <div className="mt-8 flex items-center gap-2 text-sm">
+            <div className="mt-8 flex flex-wrap items-center gap-2 text-sm">
               <span className="text-gray-500">
                 Still have questions?
               </span>
 
-              <button className="font-semibold text-blue-600 transition hover:text-blue-800">
+              <button
+                type="button"
+                className="font-semibold text-blue-600 transition hover:text-blue-800"
+              >
                 Contact us →
               </button>
             </div>
-
           </div>
-
         </div>
-
       </div>
     </section>
   );
 };
 
-export default FAQ;
+export default FAQSection;
  
