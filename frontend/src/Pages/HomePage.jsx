@@ -14,7 +14,6 @@ function HomePage(){
         <MobileNavbar/>
         <Navbar/>
         <SearchBar/>
-
         <HeroSection/>
         <ServiceMarquee/>
         <WhyChooseUs/>
