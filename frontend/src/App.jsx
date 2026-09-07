@@ -1,11 +1,14 @@
+import { Route, Routes } from "react-router-dom";
 import MobileNavigat from "./components/MobileNavigation";
+import HomePage from "./Pages/HomePage";
 
 function App() {
   return (
-    <div>
-      <h1>HomeHelpServices</h1>
-      <MobileNavigat/>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
+    </>
   )
 }
 export default App;
