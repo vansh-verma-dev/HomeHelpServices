@@ -11,7 +11,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative flex min-h-[60vh] w-full items-center overflow-hidden bg-[#07111F] sm:min-h-[65vh] lg:min-h-[68vh]">
+    <section className="hidden relative sm:flex min-h-[60vh] w-full items-center overflow-hidden bg-[#07111F] sm:min-h-[65vh] lg:min-h-[68vh]">
       <style>{`
         @keyframes heroDrift {
           0% {

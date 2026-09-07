@@ -204,7 +204,7 @@ function Footer() {
                   </p>
 
                   <p className="mt-1 text-sm">
-                    +91 98765 43210
+                    +91 XXXXXXXXXX
                   </p>
                 </div>
               </a>

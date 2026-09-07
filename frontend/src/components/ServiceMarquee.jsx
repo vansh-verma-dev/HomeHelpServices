@@ -35,7 +35,7 @@ const services = [
 
 function ServiceMarquee() {
   return (
-    <section className="overflow-hidden border-y border-slate-200 bg-white py-4">
+    <section className="hidden sm:block overflow-hidden border-y border-slate-200 bg-white py-4">
       <div className="flex w-max animate-marquee">
 
         {/* First Set */}

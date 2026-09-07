@@ -12,7 +12,7 @@ export default function MobileNavbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="relative z-50 border-b border-slate-100 bg-white lg:hidden">
+    <header className=" z-50 border-b border-slate-100 bg-white lg:hidden  sticky top-0 left-0">
       <div className="flex h-16 items-center justify-between px-4">
 
         {/* Logo */}
