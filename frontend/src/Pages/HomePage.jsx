@@ -1,4 +1,5 @@
-import FAQSection from "../components/Faqsection";
+
+import FAQ from "../components/Faqsection";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import MobileHero from "../components/MobileHero";
@@ -25,7 +26,7 @@ function HomePage() {
             <ServicesSection/>
             <WhyChooseUs />
             <Reviews/>
-            <FAQSection/>
+            <FAQ/>
             <Footer />
             <MobileNavigat />
         </>

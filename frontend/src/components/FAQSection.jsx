@@ -39,7 +39,7 @@ const faqs = [
   },
 ];
 
-const FAQSection = () => {
+const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleFAQ = (index) => {
@@ -197,5 +197,5 @@ const FAQSection = () => {
   );
 };
 
-export default FAQSection;
+export default FAQ;
  
