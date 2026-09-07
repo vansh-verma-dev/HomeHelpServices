@@ -148,7 +148,7 @@ const services = [
     image: "https://i.pinimg.com/736x/4c/14/38/4c14386770ab47187cdd9c6d008995cd.jpg",
     rating: "4.7",
     reviews: 44,
-    location: "Ghaziabad",
+    location: "Modinagar",
     services: [
       "Washing Machine Repair",
       "Fan Repair",
