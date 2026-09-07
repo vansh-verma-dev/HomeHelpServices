@@ -1,5 +1,4 @@
-
-import FAQ from "../components/Faqsection";
+import FAQ from "../components/FAQSection";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import MobileHero from "../components/MobileHero";
